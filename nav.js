@@ -1,20 +1,13 @@
 
-
   $(function() {
     $(document).on('scroll',function(){
-        // console.log($(document).scrollTop());
-        if($(document).scrollTop() > 1800){
-             $('.projectCard').addClass('animated fadeInRight');
+        console.log($(document).scrollTop());
+        if($(document).scrollTop() > 1740){
+             $('.projectCard').addClass('animated jackInTheBox');
         }else{
             $('.projectCard').css('opacity',0);
         }
-        $('.itemCard img').each(function(){
-            if($(document).scrollTop() < 1100){
-                $(this).css('opacity',0);
-            }else{
-                $(this).addClass('animated fadeIn');
-            }
-        });
+
         $('nav').each(function(){
             if($(document).scrollTop() > 200){
                 $(this).css('min-height','4vh');
@@ -25,6 +18,7 @@
     });
     
 });
+
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -53,6 +47,8 @@ const navSlide = () => {
 }
 navSlide();
 
-let scene = document.getElementById('scene');
-console.log("scene", scene);
-let parallaxInstance = new Parallax(scene);
+ScrollOut();
+
+gsap.from('.heading h1',{opacity: 0, duration: 1, y: -50, ease: "power4.out"})
+gsap.from('.heading h3',{opacity: 0, duration: 1, delay: .7})
+gsap.from('.banner img',{opacity: 0, duration: 1.5, y:-100, delay: 1, ease: "bounce"})
