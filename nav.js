@@ -1,7 +1,6 @@
 
   $(function() {
     $(document).on('scroll',function(){
-        console.log($(document).scrollTop());
         if($(document).scrollTop() > 1740){
              $('.projectCard').addClass('animated jackInTheBox');
         }else{
