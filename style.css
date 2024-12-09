@@ -339,22 +339,20 @@ nav {
 
     .aboutHeading{
         font-size: 15px;
-        padding-top: 15vh;
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .aboutHeading p{
-        
         font-size: 15px;
     }
 
     .aboutCard {
-        top: -14vh;
+        top: -80px;
     }
 
     .aboutDetails{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-row-gap: 50px;
         padding-bottom: 3vh;
     }
     .project .projectCardContainer{
@@ -364,8 +362,9 @@ nav {
     }
     .project .projectCardContainer .projectCard{
         padding: 10px;
-        margin: 0px 0px 5px 0px;
+        margin: 0px auto 5px;
         max-height: 100%;
+        width: 320px;
         display: grid;
         grid-template-columns: 1fr;
 
@@ -391,6 +390,11 @@ nav {
         padding-top: 20px;
         border-style: solid;
         border-color:  #0EA8F5;
+    }
+
+    img#cardIcon {
+        width: 40px;
+        max-width: 48px;
     }
 
 }
