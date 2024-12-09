@@ -104,7 +104,7 @@ nav {
 
 .aboutHeading {
     color: rgb(255, 255, 255);
-    padding: 120px 80px 200px;
+    padding: 120px 80px 40px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1.5px;
@@ -157,6 +157,27 @@ nav {
             color: #0EA8F5;
         }
     }
+}
+
+.linkItems{
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 180px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+
+    & img{
+        width: 100px;
+        opacity: 0.7;
+        
+        &:hover{
+        opacity: 1;
+    }
+    }
+
+    
 }
 
 .project .projectCardContainer {
@@ -226,19 +247,6 @@ nav {
         padding-bottom: 50px;
         color: rgb(44, 46, 49);
     }
-
-    & .linkItems{
-        width: 100%;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    
-        & img{
-            width: 100px;
-        }
-    }
 }
 
 [data-scroll] {
@@ -279,8 +287,8 @@ nav {
     }
     .aboutHeading{
         font-size: 15px;
-        padding-top: 5vh;
-        padding-bottom: 15vh;
+        padding-top: 120px;
+        padding-bottom: 40px;
     }
     .aboutDetails{
         padding: 0vh;
@@ -379,17 +387,24 @@ nav {
         font-size: 3vw;
     }
 
-    .container .Links .linkItems{
-        flex-direction: column;
-        justify-content: space-around;
+    .linkItems{
         padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 8px;
     }
 
-    .container .Links .linkItems #linkLogo{ 
-        width: 100%;
-        padding-top: 20px;
+    .linkItems #linkLogo{ 
+        width: 120px;
         border-style: solid;
-        border-color:  #0EA8F5;
+        border-width: 1px;
+        border-color:  #323232;
+        padding: 8px;
+
+        & img {
+            object-fit: contain;
+            height: 20px;
+        }
     }
 
     img#cardIcon {
