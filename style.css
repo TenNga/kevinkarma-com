@@ -28,74 +28,72 @@ nav {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
-}
 
-.logo a{
-    text-decoration: none;
-    color: #24262C;
-    cursor: pointer;
+    & a{
+        text-decoration: none;
+        color: #24262C;
+        cursor: pointer;
+    }
 }
 
 .nav-links {
     display: flex;
     width: 30%;
     justify-content: space-around;
-}
 
-.nav-links li{
-    list-style: none;
-}
+    & li{
+        list-style: none;
+    }
 
-.nav-links a:hover{
-    color: white;
-    transition: 0.5s;
-}
+    & a{
+        color: #24262C;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 14px;
 
-.nav-links a{
-    color: #24262C;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
+        &:hover{
+            color: white;
+            transition: 0.5s;
+        }
+    }
 }
 
 .burger {
     display: none;
     cursor: pointer;
-}
-
-.burger div{
+    & div{
     
-    width: 25px;
-    height: 3px;
-    background-color: #24262C;
-    margin: 5px;
+        width: 25px;
+        height: 3px;
+        background-color: #24262C;
+        margin: 5px;
+    }
 }
 
 .container{
     padding: 0 20vw;
     text-align: center;
-}
 
-.container .heading {
-    font-size: 20px;
-    padding-top: 15vh;
-    text-align: center;
-    color: rgb(44, 46, 49);
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-}
+    & .heading {
+        font-size: 20px;
+        padding-top: 15vh;
+        text-align: center;
+        color: rgb(44, 46, 49);
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+    }
 
-.container h3{
-    font-size: 18px;
-    font-weight: normal;
-}
-
-.container img#bannerImg{
-    padding-top: 9.5vh;
-    padding-bottom: 7vh;
-    max-width: 100%;
-    max-height: 100%;
+    & h3{
+        font-size: 18px;
+        font-weight: normal;
+    }
+    & img#bannerImg{
+        padding-top: 9.5vh;
+        padding-bottom: 7vh;
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 .topAboutMe {
@@ -106,17 +104,21 @@ nav {
 
 .aboutHeading {
     color: rgb(255, 255, 255);
-    padding: 30vh 10vw;
+    padding: 120px 80px 200px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1.5px;
     font-size: 20px;
-}
 
-.aboutHeading p {
-    margin-top: 5vh;
-    font-weight: normal;
-    font-size: 18px;
+    & p {
+        margin-top: 5vh;
+        font-weight: normal;
+        font-size: 18px;
+        
+        & strong {
+            color: rgb(44, 46, 49);
+        }
+    }
 }
 
 .aboutCard{
@@ -124,7 +126,7 @@ nav {
     background-color: white;
     border-radius: 10px;
     position: relative;
-    top: -15vh;
+    top: -100px;
     z-index: 1;
 }
 .aboutSkill h1{
@@ -132,38 +134,36 @@ nav {
     text-transform: uppercase;
 }
 .aboutDetails {
-    padding-bottom: 10vh;
+    padding-bottom: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1vw;
     border-bottom: 1px rgb(184, 182, 182) solid;
     
-}
-
-.aboutDetails .itemCard img#cardIcon{
-    max-width: 30%;
-    max-height: auto;
-    margin: 0px 25%;
-}
-
-.aboutDetails .itemCard h2{
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-}
-
-.aboutDetails .itemCard li{
-    list-style: none;
-}
-
-.aboutDetails .itemCard #skillHeading{
-    color: #0EA8F5;
+    & .itemCard {
+        & img#cardIcon{
+            max-width: 30%;
+            max-height: auto;
+            margin: 0px 25%;
+        }
+        & h2{
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+        }
+        & li{
+            list-style: none;
+        }
+        & #skillHeading{
+            color: #0EA8F5;
+        }
+    }
 }
 
 .project .projectCardContainer {
     width: 100%;
     height: 100%;
-    margin-top: 8vh;
-    margin-bottom: 8vh;
+    margin-top: 80px;
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -177,64 +177,68 @@ nav {
     grid-template-columns: 40% 60%;
     box-shadow: 2px 2px rgb(221, 220, 220);
     transition: all 0.8s;
+
+    & .projectPic{
+        width: 100%;
+        margin: auto 0;
+    }
+
+    & img{
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+    }
+    & p{
+        margin: auto 0;
+        font-size: 15px;
+    }
+
+    &:hover{
+        background-color: #06415e;
+        color: white;
+    }
+
+    .projectDesc{
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        padding: 10px;
+    
+        & button{
+            padding: 5px;
+            font-size: 14px;
+            border-radius: 8px;
+            border-style: none;
+            color: rgb(255, 255, 255);
+            background-color: rgb(44, 46, 49);
+            &:hover{
+                background-color: rgb(10, 10, 10);
+                color: rgb(67, 170, 238);
+                cursor: alias;
+            }
+        }
+    } 
 }
 
-.projectCard:hover{
-    background-color: #06415e;
-    color: white;
-}
+.container .Links {
+    & .linkHeading{
+        padding-top: 100px;
+        padding-bottom: 50px;
+        color: rgb(44, 46, 49);
+    }
 
-.projectCard .projectPic{
-    width: 100%;
-    margin: auto 0;
-}
-.projectCard img{
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-}
-.projectCard p{
-    margin: auto 0;
-    font-size: 15px;
-}
-.projectCard .projectDesc{
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    padding: 10px;
-}
-.projectCard .projectDesc button{
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 8px;
-    border-style: none;
-    color: rgb(255, 255, 255);
-    background-color: rgb(44, 46, 49);
-}
-
-.projectCard .projectDesc button:hover{
-    background-color: rgb(10, 10, 10);
-    color: rgb(67, 170, 238);
-    cursor: alias;
-}
-
-.container .Links .linkHeading{
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    color: rgb(44, 46, 49);
-}
-
-.container .Links .linkItems img{
-    width: 150px;
-}
-
-.container .Links .linkItems{
-    width: 100%;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    & .linkItems{
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        & img{
+            width: 100px;
+        }
+    }
 }
 
 [data-scroll] {
@@ -248,6 +252,19 @@ nav {
     opacity: 0;
     transform: translateY(100px);
   }
+@media screen and (min-width: 1400px) {
+    .container{
+        width: 1400px;
+        margin: 0 auto;
+        padding: 0px 200px;
+    }
+}
+@media screen and (max-width: 1400px){
+    .container{
+        padding: 0px 100px;
+    }
+}
+
 
 @media screen and (max-width: 1024px){
     .container{

@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property='og:title' content='Kevin karma'/>
+    <meta property='og:image' content='https://main.d1bze4y9fws967.amplifyapp.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FuserImage.426a6232.png&w=256&q=75'/>
+    <meta property='og:description' content='Frontend Developer'/>
+    <meta property='og:url' content='www.kevinkarma.me'/>
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='627' />
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Poppins|Francois+One" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="scroll.js" defer></script>
     <title>Kevin Karma</title>
 </head>
 
@@ -20,7 +27,6 @@
             <h4><a href="#">K.K.</a></h4>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#project">Project</a></li>
             <li><a href="#links">Links</a></li>
@@ -33,24 +39,13 @@
         </div>
     </nav>
     <wrapper>
-        <div class="container">
-            <div class="upperSection">
-                <div class="heading">
-                    <h1>Front-End Developer</h1>
-                    <h3>"I convert coffee & music into code"</h3>
-                </div>
-                <div class="banner">
-                    <img id="bannerImg" src="img/banner.png" alt="my interest" />
-                </div>
-            </div>
-        </div>
 
         <div id="about" class="topAboutMe">
             <div class="container">
                 <div class="aboutHeading">
-                    <h1 data-scroll>Hello, I'm Kevin Karma.</h1>
-                    <p data-scroll>
-                        Front-End developer with experience in HTML, CSS, JavaScript, Ruby on Rails, and React frameworks. Having a computer science background helped me tackle any problem, not just finding the solution but finding the optimal solution. I have experience building beautiful front-end design from start to finish, using unique and latest tools to maintain up-to-date. I love coding, music, and coffee.
+                    <h1>Hello, I'm Kevin Karma.</h1>
+                    <p>
+                        Dedicated and skilled <strong class="bio-bullet">Front End Developer</strong> with over <strong class="bio-bullet">3 years of experience</strong> in creating and maintaining web applications. Proficient in <strong class="bio-bullet">HTML, CSS, JavaScript, TypeScript, and ReactJS</strong>, I've successfully customized ecommerce platforms, integrated subscription features, and played an active role in <strong class="bio-bullet">cross-functional teams</strong>.
                     </p>
                 </div>
             </div>
@@ -58,59 +53,91 @@
         <div class="container">
             <div class="aboutCard">
                 <div class="aboutDetails">
+                    <div class="itemCard" >
+                        <img id="cardIcon" src="img/webIcon.png" alt="web icon">
+                        <h2>Web</h2>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>Typescript</li>
+                            <li>React</li>
+                            <li>NextJS</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                        <!-- <br /> -->
+                      
+                    </div>
                     <div class="itemCard">
                         <img id="cardIcon" src="img/mobileIcon.png" alt="mobile icon">
-                        <h2 data-scroll>Mobile</h2>
-                        <ul data-scroll>
+                        <h2>Mobile</h2>
+                        <ul>
                             <li>React Native</li>
                             <li>Expo</li>
                             <li>JavaScript</li>
                             <li>Ruby on Rails</li>
-                            <li>Java</li>
+                            <li>Figma</li>
                             <li>Android Studio</li>
                         </ul>
-                        <br />
+                        <!-- <br /> -->
                         
-                    </div>
-                    <div class="itemCard" >
-                        <img id="cardIcon" src="img/webIcon.png" alt="web icon">
-                        <h2 data-scroll>Web</h2>
-                        <ul data-scroll>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Javascript(ES6)</li>
-                            <li>ReactJS</li>
-                            <li>Redux</li>
-                            <li>DevTool</li>
-                        </ul>
-                        <br />
-                      
                     </div>
                     <div class="itemCard">
                         <img id="cardIcon" src="img/interestIcon.png" alt="Interest icon">
-                        <h2 data-scroll>Others</h2>
-                        <ul data-scroll>
-                            <li>Photoshop</li>
-                            <li>Video Editing</li>
+                        <h2>Others</h2>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Jira</li>
                             <li>Git</li>
+                            <li>Jest</li>
+                            <li>VWO</li>
                             <li>VS Code</li>
-                            <li>MySQL(LvL.2)</li>
-                            <li>Hardware</li>
                         </ul>
-                        <br />
+                        <!-- <br /> -->
                        
                     </div>
                 </div>
             </div>
             <div id="project" class="project">
                 <div class="projectHeading">
-                    <h1 data-scroll>My Recent Work</h1>
-                    <h3 data-scroll>Few of my projects. Want to see more, visit <a href="https://github.com/TenNga"
-                            target="_blank">github</a></h3>
+                    <h1 >Side Projects</h1>
+                    <h3>Few of my projects. Want to see more, visit <a href="https://github.com/TenNga"
+                            target="_blank">GitHub</a></h3>
                 </div>
 
 
                 <div class="projectCardContainer">
+                    <div class="projectCard" onmouseover="handleCardMouseOver(event)">
+                        <div class="projectPic">
+                            <img src="img/impressipeDemoScreen.png">
+                        </div>
+                        <div class="projectDesc">
+                            <h4>Hue Match</h4>
+                            <p>web application built with React, Next.js, and TypeScript. It uses the ChatGPT to generate customized color palettes based on the user's selected colors, creating seasonal palettes and color groups to avoid. 
+                            </p>
+
+                            <div>
+                            <a href="https://github.com/TenNga/hue-match" target="_blank"><button>Repo</button></a>
+                            <a href="https://hue-match.vercel.app" target="_blank"><button>Demo</button></a>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="projectCard" onmouseover="handleCardMouseOver(event)">
+                        <div class="projectPic">
+                            <img src="img/DashPortfolio.png">
+                        </div>
+                        <div class="projectDesc">
+                            <h4>Dashboard Portfolio</h4>
+                            <p>A modern, interactive portfolio built with Next.js 14, TypeScript, and Tailwind CSS. It features a responsive design, GitHub activity chart, and integrates the latest concepts from NextJS 14 using reusable components.</p>
+                            <div>
+                                <a href="https://github.com/TenNga/nextjs-portfolio" target="_blank"><button>Repo</button></a>
+                                <a href="https://main.d1bze4y9fws967.amplifyapp.com/" target="_blank"><button>Demo</button></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
                     <div class="projectCard" onmouseover="handleCardMouseOver(event)">
                         <div class="projectPic">
                             <img src="img/opTracker.png">
@@ -121,7 +148,7 @@
                             <p> No more spreadsheets, OpTracker organize your jobs with a beautiful user interface. Designed to make job search fun by representing each job in colorful cards. Developed ruby-on-rails backend to store user’s information
                                     </p>
                             <div>
-                                <a href="https://optracker.kevinkarma.com/" target="_blank"><button>Demo</button></a>
+                                <a href="https://github.com/TenNga/op-tracker-frontend" target="_blank"><button>Repo</button></a>
                                 <a href="https://www.youtube.com/watch?v=R-AbUyKb8z8&t=22s" target="_blank"><button>Video</button></a>
                             </div>
                            
@@ -137,9 +164,9 @@
                             <p> Developed the app using React native to simplify the process of tracking product/item and ability to deploy on iOS or Android platforms. Implemented scanner to save time when searching on inventory items by 50%.
                                     </p>
                         <div>
-                            <a href="https://expo.io/@kevinkarma/Inventracker" target="_blank">
+                            <a href="https://github.com/TenNga/inventracker-frontend" target="_blank">
                                 <button>
-                                    Demo (Android)
+                                    Repo
                                 </button>
                             </a>
                             <a href="https://www.youtube.com/watch?v=ADwLdq_XsIw&t=105s" target="_blank"><button>Video</button></a>
@@ -148,71 +175,39 @@
 
                         </div>
                     </div>
-                    <div class="projectCard" onmouseover="handleCardMouseOver(event)">
-                        <div class="projectPic">
-                            <img src="img/impressipeDemoScreen.png">
-                        </div>
-                        <div class="projectDesc">
-                            <h4>Impressipe</h4>
-                            <p>Designed a distinctive user interface utilizing custom CSS and HTML. Utilized recipe API’s to pull and parse data on recipe details such as recipe steps, ingredient lists, and equipment needed. 
-                            </p>
-
-                            <div>
-                            <a href="https://agile-forest-99341.herokuapp.com/recipes" target="_blank"><button>Demo</button></a>
-                            <a href="https://www.youtube.com/watch?v=aq_cm-OtYB4" target="_blank"><button>Video</button></a>
-                            </div>
-                           
-                        </div>
-                    </div>
                    
-                    <div class="projectCard" onmouseover="handleCardMouseOver(event)">
-                        <div class="projectPic">
-                            <img src="img/mazeGameDemoScreen.png">
-                        </div>
-                        <div class="projectDesc">
-                            <h4>Maze Game</h4>
-                            <p>Developed grid base single-page JavaScript Maze game. Implemented custom design using CSS and HTML for excellent UX/UI. Utilized Ruby on Rails to store player information 
-                            </p>
-                            <div>
-                                <a href="https://pure-reaches-70099.herokuapp.com/" target="_blank"><button>Demo</button></a>
-                                <a href="https://www.youtube.com/watch?v=-LRVvHrbRl4" target="_blank"><button>Video</button></a>
-                            </div>
-                            
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 
             <div id="links" class="Links">
-                <div class="linkheading" data-scroll>
+                <div class="linkheading">
                     <h1>Related Links</h1>
                     <h5>Social Media & professional profiles</h5>
                 </div>
 
                 <div class="linkItems">
                     <div id="linkLogo">
-                        <a href="https://www.linkedin.com/in/kevin-karma-2186528a/" target="_blank"><img
+                        <a href="https://www.linkedin.com/in/kevin-karma-b57007210/" target="_blank"><img
                                 src="img/linkedin.png"></a>
                     </div>
                     <div id="linkLogo">
                         <a href="https://github.com/TenNga" target="_blank"><img src="img/github.png"></a>
                     </div>
-                    <div id="linkLogo">
+                    <!-- <div id="linkLogo">
                         <a href="https://angel.co/tenzin-ngawang" target="_blank"><img src="img/angel.png"> </a>
                     </div>
                     <div id="linkLogo">
                         <a href="https://twitter.com/tenfivewang" target="_blank"><img src="img/twitter.png"></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <footer><small>&copy; Copyright 2019, Kevin Karma</small></footer>
+            <footer><small>&copy; Copyright 2024, Kevin Karma</small></footer>
         </div>
 
     </wrapper>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="nav.js"></script>
+
+    <script src="nav.js" defer></script>
 </body>
 
 </html>
