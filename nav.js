@@ -1,11 +1,11 @@
 
   $(function() {
     $(document).on('scroll',function(){
-        if($(document).scrollTop() > 1740){
-             $('.projectCard').addClass('animated jackInTheBox');
-        }else{
-            $('.projectCard').css('opacity',0);
-        }
+        // if($(document).scrollTop() > 1740){
+        //      $('.projectCard').addClass('animated jackInTheBox');
+        // }else{
+        //     $('.projectCard').css('opacity',0);
+        // }
 
         $('nav').each(function(){
             if($(document).scrollTop() > 200){
@@ -46,8 +46,8 @@ const navSlide = () => {
 }
 navSlide();
 
-ScrollOut();
+// ScrollOut();
 
-gsap.from('.heading h1',{opacity: 0, duration: 1, y: -50, ease: "power4.out"})
-gsap.from('.heading h3',{opacity: 0, duration: 1, delay: .7})
-gsap.from('.banner img',{opacity: 0, duration: 1.5, y:-100, delay: 1, ease: "bounce"})
+// gsap.from('.heading h1',{opacity: 0, duration: 1, y: -50, ease: "power4.out"})
+// gsap.from('.heading h3',{opacity: 0, duration: 1, delay: .7})
+// gsap.from('.banner img',{opacity: 0, duration: 1.5, y:-100, delay: 1, ease: "bounce"})

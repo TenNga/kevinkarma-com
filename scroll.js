@@ -1,4 +1,7 @@
 $(document).ready(()=>{
-    const sr = ScrollReveal();
-    sr.reveal('.workheading');
+    sr.reveal('.scrollUp', {
+        distance: '150%',
+        origin: 'bottom',
+        opacity: null
+    });
 })
