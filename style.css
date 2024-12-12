@@ -159,6 +159,49 @@ nav {
     }
 }
 
+.bio-bullet {
+    position: relative;
+    display: inline-block;
+}
+
+.bio-bullet:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(17, 0, 255, 0.154);
+    animation: highlight 4s ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation: highlight 4s ease-in-out;
+}
+
+.bio-bullet:nth-child(1):after {
+    animation: highlight 2s ease-in-out 0s infinite;
+}
+  
+  .bio-bullet:nth-child(2):after {
+    animation: highlight 2s ease-in-out 0.5s;
+}
+  
+  .bio-bullet:nth-child(3):after {
+    animation: highlight 4s ease-in-out 1s;
+}
+  
+  .bio-bullet:nth-child(4):after {
+    animation: highlight 1s ease-in-out 1.5s;
+}
+
+@keyframes highlight {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+  }
+
 .linkItems{
     width: 100%;
     padding-top: 40px;
