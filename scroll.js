@@ -6,11 +6,27 @@ $(document).ready(()=>{
     });
 
 
-    const textWords = document.querySelectorAll('.bio-bullet');
+    const highlightSequence = [
+      { id: 'text1', delay: 0 },
+      { id: 'text2', delay: 1000 },
+      { id: 'text3', delay: 2000 },
+      { id: 'text4', delay: 3000 }
+  ];
 
-textWords.forEach((word, index) => {
-  const delay = index * 1; // Adjust delay as needed
-//   word.style.animation = `highlight 1s ease-in-out ${delay}s infinite`;
-});
+  function loopHighlight() {
+      highlightSequence.forEach(({ id, delay }, index) => {
+          setTimeout(() => {
+              document.getElementById(id).classList.add('highlighted');
+              setTimeout(() => {
+                  document.getElementById(id).classList.remove('highlighted');
+              }, 1500); // Remove highlight after 1.5 seconds
+          }, delay + index * 500);
+      });
+
+      // Restart the loop after the total duration
+      setTimeout(loopHighlight, 6000);
+  }
+
+  loopHighlight();
 
 })
